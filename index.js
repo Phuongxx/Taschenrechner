@@ -8,7 +8,7 @@ let x = math.sqrt;
 function add(input) {
   currentNumber = currentNumber * 10 + input;
   console.log(currentNumber);
-  updateAktuell();
+  updateCurrent();
 }
 
 function setOperator(input) {
@@ -18,7 +18,7 @@ function setOperator(input) {
   previousNumber = currentNumber;
   currentNumber = 0;
   operator = input;
-  updateAktuell();
+  updateCurrent();
   updatepreviousNumber();
 }
 
@@ -45,11 +45,11 @@ function calculate() {
 
   currentNumber = result;
   operator = null;
-  updateAktuell();
+  updateCurrent();
 }
 function remove() {
   currentNumber = Math.floor(currentNumber / 10);
-  updateAktuell();
+  updateCurrent();
 }
 
 function reset() {
@@ -64,7 +64,7 @@ function reset() {
   document.getElementById("sumHistory").innerHTML = "";
 }
 
-function updateAktuell() {
+function updateCurrent() {
   document.getElementById("inputNumber").value = currentNumber;
 }
 
