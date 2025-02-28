@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="calculator-wrapper">
+      <div class="calculator">
+        <input
+          type="text"
+          readonly
+          id="inputMemory"
+          class="display"
+          placeholder="0"
+        />
+        <input
+          type="text"
+          readonly
+          id="inputNumber"
+          class="display"
+          placeholder="0"
+        />
+        <div class="buttons" id="key">
+          <button class="grid-item" onclick="change()">DM</button>
+          <button class="grid-item" onclick="hochzwei()">x&#0178;</button>
+          <button class="grid-item" onclick="wurzel()">&#8730;</button>
+          <button class="grid-item operator" onclick="remove()">&larr;</button>
+
+          <button class="grid-item" onclick="add(7)">7</button>
+          <button class="grid-item" onclick="add(8)">8</button>
+          <button class="grid-item" onclick="add(9)">9</button>
+          <button class="grid-item operator" onclick="setOperator('/')">
+            /
+          </button>
+          <button class="grid-item" onclick="add(4)">4</button>
+          <button class="grid-item" onclick="add(5)">5</button>
+          <button class="grid-item" onclick="add(6)">6</button>
+          <button class="grid-item operator" onclick="setOperator('*')">
+            *
+          </button>
+          <button class="grid-item" onclick="add(1)">1</button>
+          <button class="grid-item" onclick="add(2)">2</button>
+          <button class="grid-item" onclick="add(3)">3</button>
+          <button class="grid-item operator" onclick="setOperator('-')">
+            -
+          </button>
+          <button class="grid-item" onclick="reset('CE')">CE</button>
+          <button class="grid-item" onclick="add(0)">0</button>
+          <button class="grid-item" onclick="calculate('=')">=</button>
+          <button class="grid-item operator" onclick="setOperator('+')">
+            +
+          </button>
+        </div>
+      </div>
+      <div class="endResult-container" id="endResult">
+        <p id="sumHistory"></p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
